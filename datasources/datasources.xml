@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+    <!-- ========================================================= -->
+    <!--  ENDPOINTS                                                -->
+    <!-- ========================================================= -->
+    <endpoint displayname="KMS WMS endpoint" endpointtype="wms" name="kms_kortforsyning_wms">
+        <service isexpression="true"><![CDATA["http://kortforsyningen.kms.dk/service?ticket=" + getKmsTicket('[module.kms.login]','[module.kms.password]', true)]]></service>
+    </endpoint>
+    <endpoint endpointtype="wms" name="gst_kortforsyning_wmts_orto_a">
+        <service><![CDATA[http://a.kortforsyningen.kms.dk/orto_foraar]]></service>
+    </endpoint>
+    <endpoint endpointtype="wms" name="gst_kortforsyning_wmts_orto_b">
+        <service><![CDATA[http://b.kortforsyningen.kms.dk/orto_foraar]]></service>
+    </endpoint>
+    <endpoint endpointtype="wms" name="gst_kortforsyning_wmts_orto_c">
+        <service><![CDATA[http://c.kortforsyningen.kms.dk/orto_foraar]]></service>
+    </endpoint>
+    <endpoint endpointtype="wms" name="gst_kortforsyning_wmts_orto_d">
+        <service><![CDATA[http://d.kortforsyningen.kms.dk/orto_foraar]]></service>
+    </endpoint>
+
+	
+	<endpoint name="kms_kortforsyning_wms" endpointtype="wms" displayname="KMS WMS endpoint">
+        <service isexpression="true">"http://kortforsyningen.kms.dk/service?ticket=" + getKmsTicket('[module.kms.login]','[module.kms.password]', true)</service>
+    </endpoint>
+    <endpoint name="kms_kortforsyning_wms_a" endpointtype="wms" displayname="KMS WMS alias endpoint">
+        <service isexpression="true">"http://a.kortforsyningen.kms.dk/service?ticket=" + getKmsTicket('[module.kms.login]','[module.kms.password]', true)</service>
+    </endpoint>
+    <endpoint name="kms_kortforsyning_wms_b" endpointtype="wms" displayname="KMS WMS alias endpoint">
+        <service isexpression="true">"http://b.kortforsyningen.kms.dk/service?ticket=" + getKmsTicket('[module.kms.login]','[module.kms.password]', true)</service>
+    </endpoint>
+    <endpoint name="kms_kortforsyning_wms_c" endpointtype="wms" displayname="KMS WMS alias endpoint">
+        <service isexpression="true">"http://c.kortforsyningen.kms.dk/service?ticket=" + getKmsTicket('[module.kms.login]','[module.kms.password]', true)</service>
+    </endpoint>
+    <endpoint name="kms_kortforsyning_wms_d" endpointtype="wms" displayname="KMS WMS alias endpoint">
+        <service isexpression="true">"http://d.kortforsyningen.kms.dk/service?ticket=" + getKmsTicket('[module.kms.login]','[module.kms.password]', true)</service>
+    </endpoint>
+	
+	
+    <!-- ========================================================= -->
+    <!--  DATASOURCES                                              -->
+    <!-- ========================================================= -->
+    
+
+    
+	<datasource endpoint="gst_kortforsyning_wmts_orto_a" name="gst_orto_wmts_orto_a">
+        <wms>
+            <layers>orto_foraar</layers>
+            <format>image/jpeg</format>
+        </wms>
+    </datasource>
+    <datasource endpoint="gst_kortforsyning_wmts_orto_b" name="gst_orto_wmts_orto_b">
+        <wms>
+            <layers>orto_foraar</layers>
+            <format>image/jpeg</format>
+        </wms>
+    </datasource>
+    <datasource endpoint="gst_kortforsyning_wmts_orto_c" name="gst_orto_wmts_orto_c">
+        <wms>
+            <layers>orto_foraar</layers>
+            <format>image/jpeg</format>
+        </wms>
+    </datasource>
+    <datasource endpoint="gst_kortforsyning_wmts_orto_d" name="gst_orto_wmts_orto_d">
+        <wms>
+            <layers>orto_foraar</layers>
+            <format>image/jpeg</format>
+        </wms>
+    </datasource>
+	
+    <!-- hrks_2013_10cm -->
+    
+    <datasource name="gst-ortofoto2013" endpoint="kms_kortforsyning_wms">
+        <wms>
+            <layers>hrks_2013_10cm</layers> 
+            <format>image/jpeg</format>
+            <transparent>true</transparent>
+            <server_version>1.1.1</server_version>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2013_a" endpoint="kms_kortforsyning_wms_a">
+        <wms>
+            <layers>hrks_2013_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>	
+    <datasource name="gst-ortofoto2013_b" endpoint="kms_kortforsyning_wms_b">
+        <wms>
+            <layers>hrks_2013_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2013_c" endpoint="kms_kortforsyning_wms_c">
+        <wms>
+            <layers>hrks_2013_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2013_d" endpoint="kms_kortforsyning_wms_d">
+        <wms>
+            <layers>hrks_2013_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource> 
+    
+    <!-- ortofoto_temp -->
+    
+    <datasource name="gst-ortofoto_temp" endpoint="kms_kortforsyning_wms">
+        <wms>
+            <layers>orto_foraar_temp</layers> 
+            <format>image/jpeg</format>
+            <transparent>true</transparent>
+            <server_version>1.1.1</server_version>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar_temp</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto_temp_a" endpoint="kms_kortforsyning_wms_a">
+        <wms>
+            <layers>orto_foraar_temp</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar_temp</servicename>
+        </parameters>
+    </datasource>	
+    <datasource name="gst-ortofoto_temp_b" endpoint="kms_kortforsyning_wms_b">
+        <wms>
+            <layers>orto_foraar_temp</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar_temp</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto_temp_c" endpoint="kms_kortforsyning_wms_c">
+        <wms>
+            <layers>orto_foraar_temp</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar_temp</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto_temp_d" endpoint="kms_kortforsyning_wms_d">
+        <wms>
+            <layers>orto_foraar_temp</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar_temp</servicename>
+        </parameters>
+    </datasource> 
+    
+	
+    <!-- hrks_2012_10cm -->
+    
+	<datasource name="gst-ortofoto2012" endpoint="kms_kortforsyning_wms">
+        <wms>
+            <layers>hrks_2012_10cm</layers> 
+            <format>image/jpeg</format>
+            <transparent>true</transparent>
+            <server_version>1.1.1</server_version>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2012_a" endpoint="kms_kortforsyning_wms_a">
+        <wms>
+            <layers>hrks_2012_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>	
+	<datasource name="gst-ortofoto2012_b" endpoint="kms_kortforsyning_wms_b">
+        <wms>
+            <layers>hrks_2012_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+	<datasource name="gst-ortofoto2012_c" endpoint="kms_kortforsyning_wms_c">
+        <wms>
+            <layers>hrks_2012_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+	<datasource name="gst-ortofoto2012_d" endpoint="kms_kortforsyning_wms_d">
+        <wms>
+            <layers>hrks_2012_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource> 
+	
+    <!-- sjaelland_2011_10cm -->
+	
+	<datasource name="gst-ortofoto2011" endpoint="kms_kortforsyning_wms">
+        <wms>
+            <layers>sjaelland_2011_10cm</layers> 
+            <format>image/jpeg</format>
+            <transparent>true</transparent>
+            <server_version>1.1.1</server_version>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2011_a" endpoint="kms_kortforsyning_wms_a">
+        <wms>
+            <layers>sjaelland_2011_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>	
+	<datasource name="gst-ortofoto2011_b" endpoint="kms_kortforsyning_wms_b">
+        <wms>
+            <layers>sjaelland_2011_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+	<datasource name="gst-ortofoto2011_c" endpoint="kms_kortforsyning_wms_c">
+        <wms>
+            <layers>sjaelland_2011_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+	<datasource name="gst-ortofoto2011_d" endpoint="kms_kortforsyning_wms_d">
+        <wms>
+            <layers>sjaelland_2011_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+	
+    <!-- sjaelland2010_10cm -->
+	
+	<datasource name="gst-ortofoto2010" endpoint="kms_kortforsyning_wms">
+        <wms>
+            <layers>sjaelland2010_hrks10cm</layers> 
+            <format>image/jpeg</format>
+            <transparent>true</transparent>
+            <server_version>1.1.1</server_version>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2010_a" endpoint="kms_kortforsyning_wms_a">
+        <wms>
+            <layers>sjaelland2010_hrks10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>	
+	<datasource name="gst-ortofoto2010_b" endpoint="kms_kortforsyning_wms_b">
+        <wms>
+            <layers>sjaelland2010_hrks10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+	<datasource name="gst-ortofoto2010_c" endpoint="kms_kortforsyning_wms_c">
+        <wms>
+            <layers>sjaelland2010_hrks10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+	<datasource name="gst-ortofoto2010_d" endpoint="kms_kortforsyning_wms_d">
+        <wms>
+            <layers>sjaelland2010_hrks10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+	
+    <!-- sjaelland2009_10cm -->
+    
+    <datasource name="gst-ortofoto2009" endpoint="kms_kortforsyning_wms">
+        <wms>
+            <layers>sjaelland2009_10cm</layers> 
+            <format>image/jpeg</format>
+            <transparent>true</transparent>
+            <server_version>1.1.1</server_version>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2009_a" endpoint="kms_kortforsyning_wms_a">
+        <wms>
+            <layers>sjaelland2009_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>	
+    <datasource name="gst-ortofoto2009_b" endpoint="kms_kortforsyning_wms_b">
+        <wms>
+            <layers>sjaelland2009_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2009_c" endpoint="kms_kortforsyning_wms_c">
+        <wms>
+            <layers>sjaelland2009_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2009_d" endpoint="kms_kortforsyning_wms_d">
+        <wms>
+            <layers>sjaelland2009_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    
+    <!-- sjaelland2008_10cm -->
+    
+    <datasource name="gst-ortofoto2008" endpoint="kms_kortforsyning_wms">
+        <wms>
+            <layers>sjaelland2008_10cm</layers> 
+            <format>image/jpeg</format>
+            <transparent>true</transparent>
+            <server_version>1.1.1</server_version>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2008_a" endpoint="kms_kortforsyning_wms_a">
+        <wms>
+            <layers>sjaelland2008_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>	
+    <datasource name="gst-ortofoto2008_b" endpoint="kms_kortforsyning_wms_b">
+        <wms>
+            <layers>sjaelland2008_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2008_c" endpoint="kms_kortforsyning_wms_c">
+        <wms>
+            <layers>sjaelland2008_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2008_d" endpoint="kms_kortforsyning_wms_d">
+        <wms>
+            <layers>sjaelland2008_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+        
+    <!-- sjaelland2007_10cm -->
+    
+    <datasource name="gst-ortofoto2007" endpoint="kms_kortforsyning_wms">
+        <wms>
+            <layers>sjaelland2007_10cm</layers> 
+            <format>image/jpeg</format>
+            <transparent>true</transparent>
+            <server_version>1.1.1</server_version>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2007_a" endpoint="kms_kortforsyning_wms_a">
+        <wms>
+            <layers>sjaelland2007_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>	
+    <datasource name="gst-ortofoto2007_b" endpoint="kms_kortforsyning_wms_b">
+        <wms>
+            <layers>sjaelland2007_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2007_c" endpoint="kms_kortforsyning_wms_c">
+        <wms>
+            <layers>sjaelland2007_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2007_d" endpoint="kms_kortforsyning_wms_d">
+        <wms>
+            <layers>sjaelland2007_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    
+    <!-- sjaelland2006_10cm -->
+    
+    <datasource name="gst-ortofoto2006" endpoint="kms_kortforsyning_wms">
+        <wms>
+            <layers>sjaelland2006_10cm</layers> 
+            <format>image/jpeg</format>
+            <transparent>true</transparent>
+            <server_version>1.1.1</server_version>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2006_a" endpoint="kms_kortforsyning_wms_a">
+        <wms>
+            <layers>sjaelland2006_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>	
+    <datasource name="gst-ortofoto2006_b" endpoint="kms_kortforsyning_wms_b">
+        <wms>
+            <layers>sjaelland2006_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2006_c" endpoint="kms_kortforsyning_wms_c">
+        <wms>
+            <layers>sjaelland2006_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+    <datasource name="gst-ortofoto2006_d" endpoint="kms_kortforsyning_wms_d">
+        <wms>
+            <layers>sjaelland2006_10cm</layers>
+            <format>image/jpeg</format>
+        </wms>
+        <parameters>
+            <servicename>orto_foraar</servicename>
+        </parameters>
+    </datasource>
+
+</datasources>

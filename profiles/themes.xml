@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+
+    <theme module="ortofoto" name="theme-tile-ddoby2005">
+        <themeselector>
+            <initialstate>available</initialstate>
+            <group>ortofoto</group>
+            <selectable>true</selectable>
+            <displayname>Ortofoto forår 2005</displayname>
+        </themeselector>
+        <downloadable>false</downloadable>
+    </theme>
+   <!-- <theme module="ortofoto" name="theme-gst-ortofoto2006">
+        <themeselector>
+            <initialstate>available</initialstate>
+            <group>ortofoto</group>
+            <selectable>true</selectable>
+            <displayname>Ortofoto forår 2006</displayname>
+        </themeselector>
+        <downloadable>false</downloadable>
+    </theme>-->
+    <theme module="ortofoto" name="theme-gst-ortofoto2007">
+        <themeselector>
+            <initialstate>available</initialstate>
+            <group>ortofoto</group>
+            <selectable>true</selectable>
+            <displayname>Ortofoto forår 2007</displayname>
+        </themeselector>
+        <downloadable>false</downloadable>
+    </theme>
+    <theme module="ortofoto" name="theme-gst-ortofoto2008">
+        <themeselector>
+            <initialstate>available</initialstate>
+            <group>ortofoto</group>
+            <selectable>true</selectable>
+            <displayname>Ortofoto forår 2008</displayname>
+        </themeselector>
+        <downloadable>false</downloadable>
+    </theme>
+    <theme module="ortofoto" name="theme-gst-ortofoto2009">
+        <themeselector>
+            <initialstate>available</initialstate>
+            <group>ortofoto</group>
+            <selectable>true</selectable>
+            <displayname>Ortofoto forår 2009</displayname>
+        </themeselector>
+        <downloadable>false</downloadable>
+    </theme>
+    <theme module="ortofoto" name="theme-gst-ortofoto2010">
+        <themeselector>
+            <initialstate>available</initialstate>
+            <group>ortofoto</group>
+            <selectable>true</selectable>
+            <displayname>Ortofoto forår 2010</displayname>
+        </themeselector>
+        <downloadable>false</downloadable>
+    </theme>
+    <theme module="ortofoto" name="theme-gst-ortofoto2011">
+        <themeselector>
+            <initialstate>available</initialstate>
+            <group>ortofoto</group>
+            <selectable>true</selectable>
+            <displayname>Ortofoto forår 2011</displayname>
+        </themeselector>
+        <downloadable>false</downloadable>
+    </theme>
+    <theme module="ortofoto" name="theme-gst-ortofoto2012">
+        <themeselector>
+            <initialstate>available</initialstate>
+            <group>ortofoto</group>
+            <selectable>true</selectable>
+            <displayname>Ortofoto forår 2012</displayname>
+        </themeselector>
+        <downloadable>false</downloadable>
+    </theme>
+    <theme module="ortofoto" name="theme-gst-ortofoto2013">
+        <themeselector>
+            <initialstate>available</initialstate>
+            <group>ortofoto</group>
+            <selectable>true</selectable>
+            <displayname>Ortofoto forår 2013</displayname>
+        </themeselector>
+        <downloadable>false</downloadable>
+    </theme>    
+    <theme module="ortofoto" name="theme-gst-ortofoto_temp">
+        <themeselector>
+            <initialstate>available</initialstate>
+            <group>ortofoto</group>
+            <selectable>true</selectable>
+            <displayname>Ortofoto forår 2014</displayname>
+        </themeselector>
+        <downloadable>false</downloadable>
+    </theme>
+		
+</themes>

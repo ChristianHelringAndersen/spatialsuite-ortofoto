@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<theme>
+    
+    
+    <cbinfo-metadata>
+        <param name="metadata.text"><![CDATA[Ortofoto 2014.\nIndeholder data fra Geodatastyrelsen, WMS-tjeneste.]]></param>
+        <param name="copyright-text">&#169; Geodatastyrelsen</param>
+        <param name="copyright.url">http://www.gst.dk/Emner/Frie_data/Vilkaar/</param>
+        <param name="img">/images/standard/themeicons/orto2.png</param>
+    </cbinfo-metadata>
+
+    <clientlayers>
+        <clientlayer>
+            <datasource>gst-ortofoto_temp_a</datasource>
+            <datasource>gst-ortofoto_temp_b</datasource>
+            <datasource>gst-ortofoto_temp_c</datasource>
+            <datasource>gst-ortofoto_temp_d</datasource>
+            <format>image/jpeg</format>
+        </clientlayer>
+    </clientlayers>
+
+    <layer name="orto_foraar" type="RASTER">
+        [datasource:gst-ortofoto_temp.mapfile-datasource]
+    <class>
+            <name>Ortofoto 2014</name>
+            <style>
+                <color>0 0 0</color>
+                <symbol>ortofoto</symbol>
+            </style>
+        </class>
+        <opacity>100</opacity>
+    </layer>
+
+</theme>
+
+
